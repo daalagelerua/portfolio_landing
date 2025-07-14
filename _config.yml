@@ -3,13 +3,13 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# url:                   https://username.github.io
+url: https://daalagelerua.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
 # with a leading `/` but no trailing `/`. Use the empty string '' otherwise.
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# baseurl:               '/hydejack-starter-kit'
+baseurl: '/vizza'
 
 
 # General settings
@@ -17,22 +17,22 @@
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  fr
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Starter Kit
+title:                 Vizza
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  Vizza simplifie vos démarches de visa en vous fournissant instantanément 
+  les exigences pour votre prochaine destination.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               Simplifiez vos démarches de visa
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              [visa, voyage, travel, passeport, destination, requirements, immigration, holberton, project]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -42,17 +42,20 @@ logo:                  /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Aurèle Perillat
+  email:               aurele284@gmail.com
   # # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  github: https://github.com/daalagelerua
+  linkedin: www.linkedin.com/in/aurèle-perillat
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /example/
+  - title:             Accueil
+    url:               /
   - title:             Documentation
     url:               /docs/
+  - title: Code Source
+    url: https://github.com/daalagelerua/holbertonschool-portfolio_project/tree/main/vizza-platform
   - title:             About
     url:               /about/
 
@@ -67,7 +70,7 @@ legal:
     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2024. All rights reserved.
+copyright:             © 2025 Vizza by Aurèle Périllat. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -148,10 +151,12 @@ defaults:
       sitemap:         false
 
   # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
+  - scope:
+      type: posts
+    values:
+      layout: post
+      comments: true
+      sitemap: true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -313,6 +318,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - functions
+  - node_modules
+  - backend/
+  - vizza-platform/
 include:
   - _routes.json
   - .well-known
@@ -360,11 +368,11 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+ social:
+   name:                Aurèle Perillat
+   links:
+      - https://github.com/daalagelerua
+      - www.linkedin.com/in/aurèle-perillat
 
 
 # Plugin Configs
@@ -401,24 +409,21 @@ jekyll_compose:
     drafts:
       layout: post
       description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+        Article sur le développement de Vizza et les technologies utilisées
       image:
         path: /assets/img/sidebar-bg.jpg
     posts:
       layout: post
       description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+        Découvrez les dernières actualités et fonctionnalités de Vizza
       image:
         path: /assets/img/sidebar-bg.jpg
     projects:
       layout: project
       description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+        Projet lié au développement de Vizza - plateforme de visa
       image:
         path: /assets/img/sidebar-bg.jpg
       links:
-        - title: Project Link
-          url: https://example.com
+        - title: Code Source
+          url: https://github.com/daalagelerua/holbertonschool-portfolio_project/tree/main/vizza-platform
